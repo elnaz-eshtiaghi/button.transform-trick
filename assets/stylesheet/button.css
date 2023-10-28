@@ -1,0 +1,152 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  text-transform: capitalize;
+  transform-style: preserve-3d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #232323;
+  position: relative;
+  background-image: url(../img/grunge-wall-texture.jpg);
+}
+body:hover ul {
+  transform: rotate3d(1, 1, 1, -70deg);
+}
+body:hover > section {
+  width: 0;
+  height: 0;
+  font-size: 0;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style-type: none;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+section {
+  width: 80%;
+  font-size: 5vw;
+  background-color: #232323;
+  transition: 1s;
+  color: #A8A8A8;
+  padding: 50px;
+  position: absolute;
+  border: 1px solid rgba(0, 0, 0, 0);
+  box-shadow: 10px 10px 10px rgb(56, 56, 56), -1px -1px 5px rgb(90, 90, 90), inset 10px 10px 10px rgb(0, 0, 0), inset -10px -10px 10px rgb(90, 90, 90);
+  text-shadow: 2px 2px 1px rgb(119, 119, 119), -2px -2px 1px rgb(73, 73, 73);
+  color: #191919;
+}
+section a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu {
+  transform-style: preserve-3d;
+  width: 100px;
+}
+.menu > ul {
+  width: 100%;
+  justify-content: center;
+  transform-style: preserve-3d;
+  transform: rotate3d(1, 1, 1, 240deg);
+  transition-delay: 2s;
+  transition-duration: 1s;
+}
+.menu > ul > li {
+  width: 10%;
+  transition: 1s;
+  color: #A8A8A8;
+  padding: 50px;
+  position: relative;
+  background-color: #232323;
+  transform-style: preserve-3d;
+  border: 1px solid rgba(0, 0, 0, 0);
+  box-shadow: 10px 10px 10px rgb(56, 56, 56), -1px -1px 5px rgb(90, 90, 90);
+}
+.menu > ul > li::after {
+  content: "";
+  width: 100%;
+  height: 15px;
+  background-color: rgb(0, 0, 0);
+  position: absolute;
+  left: 0;
+  bottom: -15px;
+  transform-origin: top;
+  transform: rotatex(88deg);
+}
+.menu > ul > li::before {
+  content: "";
+  width: 15px;
+  height: 100%;
+  background-color: rgb(78, 78, 78);
+  position: absolute;
+  left: -15px;
+  top: 0;
+  transform-origin: right;
+  transform: rotatey(100deg);
+}
+.menu > ul > li:hover {
+  transform: perspective(800px) translatex(10px) translateY(4px) translateZ(-1px) scale(0.7);
+  background-color: tomato;
+  border-color: tomato;
+  border-radius: 5px;
+  color: #191919;
+  box-shadow: inset 10px 10px 10px rgb(184, 68, 48), inset -10px -10px 10px rgb(255, 126, 103);
+  transition-property: color, border-color, background-color, border-radius, transform;
+  transition-duration: 0.2s, 1s, 1s, 1s, 1s;
+  transition-delay: 0, 0.5s, 0.05s, 0.5s, 0.7s;
+}
+.menu > ul > li:hover::after {
+  background-color: rgb(184, 68, 48);
+  bottom: -10px;
+  height: 10px;
+}
+.menu > ul > li:hover::before {
+  background-color: rgb(255, 126, 103);
+  left: -10px;
+  width: 10px;
+}
+.menu > ul > li:hover > a > i {
+  opacity: 0;
+}
+.menu > ul > li:hover > a > span {
+  opacity: 1;
+}
+.menu > ul > li > a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.menu > ul > li > a > * {
+  position: absolute;
+  transition: 0.5s;
+}
+.menu > ul > li > a > i {
+  font-size: 3vw;
+}
+.menu > ul > li > a > span {
+  font-size: 1.5vw;
+  opacity: 0;
+  transition-delay: 0.2s;
+}/*# sourceMappingURL=button.css.map */
